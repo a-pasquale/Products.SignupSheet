@@ -1,0 +1,16 @@
+<!-- this little trick keeps the editing border from showing up -->
+<metal:top metal:define-macro="css"   
+               tal:define="border python:test( here.portal_membership.isAnonymousUser(),     'disable_border', 'ignore'  );
+               dummy python: request.set(border,1) " /> 
+       
+<metal:header metal:define-macro="header" 
+     tal:define="signupsheet nocall:context/aq_parent">
+  <h1 class="documentHeader" 
+      i18n:domain="signupsheet" i18n:translate="heading_registrant">
+     Registration for <span i18n:name="title" tal:content="signupsheet/Title">Title</span>
+  </h1>
+  <div class="registrant-info" tal:condition="signupsheet/getRegistrantProlog | nothing"
+       tal:content="structure signupsheet/getRegistrantProlog">
+     Lorem ipsum  
+  </div>
+</metal:header>

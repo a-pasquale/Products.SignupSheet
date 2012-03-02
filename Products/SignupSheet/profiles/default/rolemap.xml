@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+  	<permission name="SignupSheet: Add SignupSheet"
+                acquire="False">
+      <role name="Manager"/>
+      <role name="Contributor"/>
+      <role name="Site Administrator"/>
+    </permission>
+  	<permission name="SignupSheet: View Registration Info"
+                acquire="False">
+      <role name="Manager"/>
+      <role name="Reviewer"/>
+      <role name="Site Administrator"/>
+    </permission>
+  	<permission name="ATSE: Manage schema"
+                acquire="False">
+      <role name="Manager"/>
+      <role name="Owner"/>
+      <role name="Editor"/>
+      <role name="Site Administrator"/>
+    </permission>
+  	<permission name="SignupSheet: View Registrants"
+                acquire="False">
+      <role name="Manager"/>
+      <role name="Editor"/>
+      <role name="Reviewer"/>	  
+      <role name="Site Administrator"/>
+    </permission>
+
+  </permissions>
+</rolemap>

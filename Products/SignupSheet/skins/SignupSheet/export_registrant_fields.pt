@@ -1,0 +1,92 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="signupsheet">
+
+<body>
+
+<metal:block
+    fill-slot="top_slot"/>
+
+<div metal:fill-slot="main">
+<div metal:define-macro="main"
+    tal:omit-tag=""
+    tal:define="export_type request/export_type | nothing;
+        fieldnames python:context.registrantFieldNames('Registrant');">
+
+<h1 i18n:translate="heading_export_contacts">Export Registrants</h1>
+
+<h4 i18n:translate="heading_import_contacts_step_one"
+    >Select fields to export and download CSV file</h4>
+<form name="form" action="." method="post"
+    tal:attributes="action context/absolute_url">
+    
+<table class="listing" summary="Field names">
+    
+<thead>
+<tr>
+    <th class="nosort">
+        <input type="checkbox"
+            onclick="toggleSelect(this, 'fields:list');"
+            class="noborder"
+            name="alr_toggle"
+            value="#"
+            id="alr_toggle"
+            tabindex=""
+            tal:attributes="tabindex tabindex;"/>
+    </th>
+    <th i18n:translate="field_name">Field Name</th>
+</tr>
+</thead>
+    
+<tbody>
+
+<tal:block repeat="fieldname fieldnames">
+<tr>
+<td>
+    <input type="checkbox" name="fields:list" checked="checked"
+            tal:attributes="value fieldname;
+                            tabindex tabindex;" />
+</td>
+<td tal:content="fieldname" i18n:translate="">fieldname</td>
+</tr>
+</tal:block>
+
+</tbody>
+</table>
+
+
+<div>
+    <span i18n:translate="label_delimiter">Delimiter</span>
+    <select name="delimiter" size="1">
+        <option value="comma" i18n:translate="comma">Comma</option>
+        <option value="colon" i18n:translate="colon">Colon</option>
+        <option value="tabulator" i18n:translate="tabulator">Tabulator</option>
+        <option value="semicolon" SELECTED="1" i18n:translate="semicolon">Semicolon</option>
+        <option value="space" i18n:translate="space">Space</option>
+    </select>
+</div>
+
+            
+<div class="submit">
+
+    <input type="hidden" name="export_type"
+        value='Registrant' />
+    <input type="hidden" name="current_path"
+        tal:attributes="value python:'/'.join(context.getPhysicalPath())" />
+    
+    <input class="context"
+            type="submit"
+            value="Download"
+            name="exportCSV:method"
+            i18n:attributes="value"
+            tabindex=""
+            tal:attributes="tabindex tabindex/next;"
+            />
+</div>
+    
+</form>
+</div>
+</div>
+</body>
+</html>

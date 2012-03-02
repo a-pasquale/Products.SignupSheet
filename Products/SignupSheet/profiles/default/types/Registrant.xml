@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<object name="Registrant" meta_type="Factory-based Type Information"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="signupsheet">
+ <property name="title" i18n:translate="">Registrant</property>
+ <property
+    name="description" i18n:translate="">Registration form data</property>
+ <property name="content_icon">registrant.gif</property>
+ <property name="content_meta_type">Registrant</property>
+ <property name="product">SignupSheet</property>
+ <property name="factory">addRegistrant</property>
+ <property name="immediate_view">base_edit</property>
+ <property name="global_allow">False</property>
+ <property name="filter_content_types">False</property>
+ <property name="allowed_content_types"/>
+ <property name="allow_discussion">False</property>
+ <alias from="(Default)" to="base_view"/>
+ <alias from="edit" to="base_edit"/>
+ <alias from="view" to="base_view"/>
+ <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${object_url}/base_view" visible="True">
+  <permission value="View"/>
+ </action>
+ <action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/base_edit" visible="True">
+  <permission value="Modify portal content"/>
+ </action>
+<action title="References" action_id="references" category="object"
+    condition_expr="object/archetype_tool/has_graphviz"
+    url_expr="string:${object_url}/reference_graph" visible="False">
+  <permission value="Modify portal content"/>
+  <permission value="Review portal content"/>
+ </action>
+</object>

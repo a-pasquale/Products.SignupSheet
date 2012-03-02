@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en-US"
+      i18n:domain="ATSchemaEditorNG">
+
+<head></head>
+<body>
+
+<span metal:define-macro="schema_editor">
+ <div style="margin: 15px 1px 1px 1px;">
+
+  <!-- portlets left side -->
+  <div class="left" style="width:25%;"
+       tal:define="fieldsets python: context.atse_getSchemataNames(SCHEMA_ID);
+                   default_fieldset python: test(fieldsets[0], fieldsets[0], []);
+                   global fieldset request/schemata|default_fieldset|nothing">
+
+    <metal:block tal:condition="not: request/schemata|nothing">
+      <span tal:define="dummy python: request.set('schemata', default_fieldset)" /> 
+    </metal:block>
+
+    <div style="display:none"><tal:if condition="fieldset">
+        <tal:div metal:use-macro="here/atse_macros/macros/selection" />
+    </tal:if>
+    <tal:div metal:use-macro="here/atse_macros/macros/registerobject" />
+    </div>
+    <tal:if condition="fieldset">
+        <div style="display:none"><tal:div metal:use-macro="here/atse_macros/macros/fieldsets" />
+        </div>
+        <tal:div metal:use-macro="here/atse_macros/macros/fields" />
+        <tal:div metal:use-macro="here/sus_atse_macros/macros/maintenance" />
+    </tal:if>
+  </div>
+        
+  <!-- portlet right side -->
+  <div class="right" style="width:70%;">
+    <tal:div metal:use-macro="here/sus_atse_macros/macros/fieldeditor" />
+  </div>
+
+  <div class="clear"> </div>
+
+ </div>
+</span>
+</body>
+</html>

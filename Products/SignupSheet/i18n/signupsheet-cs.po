@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SignupSheet\n"
+"POT-Creation-Date: 2011-10-13 13:44+0000\n"
+"PO-Revision-Date: 2007-02-20 11:57+0100\n"
+"Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
+"Language-Team: info@corenet.cz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: cs\n"
+"Language-Name: Czech\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: signupsheet\n"
+
+#: ../profiles/default/types/SignupSheet.xml
+msgid "A form for subscribe users to attend an event"
+msgstr ""
+
+#: ../events.py:19
+msgid "Can't subscribe. No more free slots"
+msgstr ""
+
+#. Default: "Confirm"
+#: ../skins/SignupSheet/view_registrants.pt:80
+msgid "Confirm"
+msgstr "Potvrdit"
+
+#. Default: "Download"
+#: ../skins/SignupSheet/export_registrant_fields.pt:78
+msgid "Download"
+msgstr "Stáhnout"
+
+#. Default: "Early bird until"
+#: ../skins/SignupSheet/signupsheet_view.pt:21
+msgid "Early bird until"
+msgstr ""
+
+#. Default: "Edit"
+#: ../skins/SignupSheet/view_registrants.pt:72
+msgid "Edit"
+msgstr "Upravit"
+
+#: ../content/registrant.py:38
+msgid "First name"
+msgstr ""
+
+#: ../content/registrant.py:45
+msgid "Last name"
+msgstr ""
+
+#: ../profiles/default/types/Registrant.xml
+msgid "Registrant"
+msgstr ""
+
+#. Default: "Registration deadline"
+#: ../skins/SignupSheet/signupsheet_view.pt:25
+msgid "Registration deadline"
+msgstr ""
+
+#: ../profiles/default/types/Registrant.xml
+msgid "Registration form data"
+msgstr ""
+
+#: ../profiles/default/types/SignupSheet.xml
+msgid "Signup Sheet"
+msgstr ""
+
+#. Default: "The registration is closed"
+#: ../skins/SignupSheet/signupsheet_view.pt:46
+msgid "The registration is closed"
+msgstr "Registrace byla ukončena"
+
+#. Default: "Colon"
+#: ../skins/SignupSheet/export_registrant_fields.pt:63
+msgid "colon"
+msgstr "Dvojtečka"
+
+#. Default: "Comma"
+#: ../skins/SignupSheet/export_registrant_fields.pt:62
+msgid "comma"
+msgstr "Čárka"
+
+#. Default: "confirmed:"
+#: ../skins/SignupSheet/view_registrants.pt:33
+msgid "confirmed"
+msgstr "potvrzeno"
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">Thank you for registering to <tal:s tal:content=\"context/Title\" />\nYour status is: <tal:s tal:replace=\"registrant/computeStatus\">registered</tal:s>\nYour email is: <tal:e tal:content=\"registrant/email\" />\n</tal:block>\n"
+#: ../content/signupsheet.py:513
+msgid "default_email_response_message"
+msgstr ""
+
+#. Default: "string:Your registration for ${object/Title} has been received"
+#: ../content/signupsheet.py:499
+msgid "default_email_response_subject"
+msgstr ""
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">Thank you for registering, we will contact you shortly. <br/>\nYou provided the following information:<br />\nName: <strong tal:content=\"registrant/computeFullname\" /><br/>\nEmail: <strong tal:content=\"registrant/email\" /><br/>\n</tal:block>\n"
+#: ../content/signupsheet.py:484
+msgid "default_thank_you_text"
+msgstr ""
+
+#. Defaut: "Display seats left"
+msgid "field_display_size_left"
+msgstr ""
+
+#. Default: "Early bird phase until"
+#: Content Type: SignupSheet, Field: earlyBirdDate
+msgid "field_early_bird_phase"
+msgstr ""
+
+#. Default: "Number of registrants"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "field_eventsize"
+msgstr "Maximální počet zaregistrovaných"
+
+#. Default: "Field Name"
+#: ../skins/SignupSheet/export_registrant_fields.pt:38
+msgid "field_name"
+msgstr "Název pole"
+
+#. Default: "Registration deadline"
+#: Content Type: SignupSheet, Field: registrationDeadline
+msgid "field_registration_deadline"
+msgstr ""
+
+#. Default: "Size of wait list"
+#: Content Type: SignupSheet, Field: waitlist_size
+msgid "field_waitlist_size"
+msgstr "Velikost pořadníku"
+
+#. Defaut: "Choose to show in the subscription page the number of seats left"
+msgid "fieldhelp_display_size_left"
+msgstr ""
+
+#. Default: "Set to 0 for unlimited registration"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "fieldhelp_eventsize"
+msgstr "Nastavíte-li 0, pak nebude počet registrovaných omezen."
+
+#. Default: "Action"
+#: ../skins/SignupSheet/view_registrants.pt:50
+msgid "heading_action"
+msgstr "Operace"
+
+#. Default: "Created"
+#: ../skins/SignupSheet/view_registrants.pt:48
+msgid "heading_created"
+msgstr "Vytvořeno"
+
+#. Default: "Export Registrants"
+#: ../skins/SignupSheet/export_registrant_fields.pt:17
+msgid "heading_export_contacts"
+msgstr "Export registrací"
+
+#. Default: "Select fields to export and download CSV file"
+#: ../skins/SignupSheet/export_registrant_fields.pt:19
+msgid "heading_import_contacts_step_one"
+msgstr "Vyberte pole, která mají být obsažena ve výstupním CSV souboru"
+
+#. Default: "Registration for ${title}"
+#: ../skins/Registrant/registrant_edit.pt:10
+#, fuzzy
+msgid "heading_registrant"
+msgstr "Registrace na ${title}"
+
+#. Default: "Review state"
+#: ../skins/SignupSheet/view_registrants.pt:49
+msgid "heading_review_state"
+msgstr "Stav"
+
+#. Default: "Thank you"
+#: ../skins/SignupSheet/thank_you_message.pt:16
+msgid "heading_thank_you"
+msgstr "Děkujeme"
+
+#. Default: "View Registrants"
+#: ../skins/SignupSheet/view_registrants.pt:24
+msgid "heading_view_registrants"
+msgstr "Seznam registrací"
+
+#. Default: "Thank you page for returned to registrant. Is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "help_Thank_You"
+msgstr "Stránka s poděkováním, která bude zobrazena registrujícímu se. Zde uvedená šablona bude převedena na HTML text a zobrazena na stránce s poděkováním. Můžete v ní použít \"context\", což je SignupSheet objekt a \"options/registrant\", což je objekt právě zaregistrovaného uživatele."
+
+#. Default: "Text for front page of signup"
+#: Content Type: SignupSheet, Field: text
+msgid "help_body_text"
+msgstr "Zadejte text, který se zobrazí před možností zaregistrování se."
+
+#. Default: "Email message text that is returned to registrant. This template is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: email_response
+msgid "help_email_message"
+msgstr "Text emailové zprávy, která se pošle zaregistrovanému. Zde uvedená šablona bude převedena na text a odeslána emailem právě zaregistrovanému uživateli. Můžete v ní použít \"context\", což je SignupSheet objekt a \"options/registrant\", což je objekt právě zaregistrovaného uživatele."
+
+#. Default: "Enter TALES expression of confirmation email subject. 'object' is SignupSheet object."
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "help_email_response_subject"
+msgstr "Zadejte TALES výraz, ze kterého bude vygenerován předmět potvrzujícího emailu. Chcete-li zadat jen text, zadejte prosím string:Váš text. Pokud do textu vložíte ${object/Title}, bude tento výraz nahrazen nadpisem \"článku\"."
+
+#. Default: "Check this checkbox to send email in HTML format. Otherwise will be sent in plain text."
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "help_html_email"
+msgstr "Pokud chcete e-maily generovat a posílat v HTML, zaškrtněte toto pole. V opačném případě budou posílány jako čistý text. Prosím pozor, v případě, že používáte čistý text, nesmí níže uvedené šablony emailů obsahovat HTML značky. Používíní značek <tal> je povoleno, protože ty se do výsledného textu nepromítnou."
+
+#. Default: "Email address (or adresses delimited by comma) which will be notified about new registrant"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "help_notify_email"
+msgstr "Zadejte email, kam bude zaslána informace o nově zaregistrovaném uživateli."
+
+#. Default: "Email message text that is sent to notifyEmail address. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "help_notify_email_message"
+msgstr "Text emailu, který se zašle na notifikační adresu. Není-li zadána žádná notifikační emailová adresa, tento text se nepoužije."
+
+#. Default: "Enter TALES expression of notification email subject. 'object' is SignupSheet object. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "help_notify_email_response_subject"
+msgstr "Zadejte TALES výraz, který bude převeden na předmět notifikační zprávy. Chcete-li zadat jen text, zadejte prosím string:Váš text. Pokud do textu vložíte ${object/Title}, bude tento výraz nahrazen nadpisem \"článku\". Není-li nastavena žádná notifikační adresa, tento text se nepoužije."
+
+#. Default: "This text will be displayed before registrant fields on the registrant edit page."
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "help_registrant_prolog_text"
+msgstr ""
+
+#. Default: "Thank You"
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "label_Thank_You"
+msgstr "Děkujeme"
+
+#. Default: "Body Text"
+#: Content Type: SignupSheet, Field: text
+msgid "label_body_text"
+msgstr "Text dokumentu"
+
+#. Default: "Delimiter"
+#: ../skins/SignupSheet/export_registrant_fields.pt:60
+msgid "label_delimiter"
+msgstr "Oddělovač"
+
+#. Default: "Email response message"
+#: Content Type: SignupSheet, Field: email_response
+msgid "label_email_response"
+msgstr "Text potvrzujícího emailu"
+
+#. Default: "Confirmation email subject"
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "label_email_response_subject"
+msgstr "Předmět potvrzujícího e-mailu"
+
+#. Default: "HTML email"
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "label_html_email"
+msgstr "HTML email?"
+
+#. Default: "Notify mail address"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "label_notify_email"
+msgstr "Notifikace na email"
+
+#. Default: "Notification email response message"
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "label_notify_email_response"
+msgstr "Šablona notifikačního emailu."
+
+#. Default: "Notification email subject"
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "label_notify_email_response_subject"
+msgstr "Předmět notifikačního emailu."
+
+#. Default: "Registrant prolog"
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "label_registrant_prolog_text"
+msgstr ""
+
+#. Default: "No registrants"
+#: ../skins/SignupSheet/view_registrants.pt:26
+msgid "no registrants"
+msgstr "Zatím nejsou žádní registrovaní"
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">New registrant registered for <tal:s tal:content=\"context/Title\" />\nPlease check current registrans: <tal:s tal:content=\"string:${context/absolute_url}/view_registrants\" />\n</tal:block>\n"
+#: ../content/signupsheet.py:540
+msgid "notify_email_response_message"
+msgstr ""
+
+#. Default: "string:Notification: New registration for ${object/Title} has been received"
+#: ../content/signupsheet.py:527
+msgid "notify_email_response_subject"
+msgstr ""
+
+#. Default: "registrants"
+#: ../skins/SignupSheet/view_registrants.pt:32
+msgid "registrants"
+msgstr "registrovaných"
+
+#. Default: "${seats} seats left."
+#: ../skins/SignupSheet/signupsheet_view.pt:53
+msgid "seats_left_message"
+msgstr ""
+
+#. Default: "Semicolon"
+#: ../skins/SignupSheet/export_registrant_fields.pt:65
+msgid "semicolon"
+msgstr "Středník"
+
+#. Default: "Sign up!"
+#: content/signupsheet.py
+msgid "sign_up"
+msgstr "Zaregistrovat"
+
+#. Default: "Sign up for waitinglist"
+#: content/signupsheet.py
+msgid "sign_up_for_waitinglist"
+msgstr "Zaregistrovat se do pořadníku"
+
+#. Default: "Space"
+#: ../skins/SignupSheet/export_registrant_fields.pt:66
+msgid "space"
+msgstr "Mezera"
+
+#. Default: "Tabulator"
+#: ../skins/SignupSheet/export_registrant_fields.pt:64
+msgid "tabulator"
+msgstr "Tabulátor"
+
+#. Default: "Registration is full"
+#: ../skins/SignupSheet/signupsheet_view.pt:65
+msgid "text_registration_full"
+msgstr "Registrace je ukončena"
+
+#. Default: "Back"
+#: ../skins/SignupSheet/thank_you_message.pt:20
+msgid "thank_you_go_back"
+msgstr "Zpět"
+
+#. Default: "unconfirmed:"
+#: ../skins/SignupSheet/view_registrants.pt:35
+msgid "unconfirmed"
+msgstr "nepotvrzeno"
+

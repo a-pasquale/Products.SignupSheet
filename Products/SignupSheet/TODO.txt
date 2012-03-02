@@ -1,0 +1,6 @@
+SignupSheet TODO
+-----------------
+
+- Views for registrant information
+- Tests!!  These would have save a lot of development time if done at an early stage, sigh.
+

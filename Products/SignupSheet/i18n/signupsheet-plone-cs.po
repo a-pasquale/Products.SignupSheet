@@ -1,0 +1,48 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SignupSheet\n"
+"POT-Creation-Date: 2007-01-16 17:51+0000\n"
+"PO-Revision-Date: 2007-02-01 21:41+0100\n"
+"Last-Translator: Radim Novotny <novotny.radim@gmail.com>\n"
+"Language-Team: info@corenet.cz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: cs\n"
+"Language-Name: Czech\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+msgid "close signup sheet"
+msgstr "Ukončit registrace"
+
+msgid "closed for submissions"
+msgstr "Registrace ukončeny"
+
+msgid "edit registrant form"
+msgstr "Nastavení reg. formuláře"
+
+msgid "export data"
+msgstr "Export dat"
+
+msgid "label_registered"
+msgstr "Registrovaný"
+
+msgid "label_waitinglist"
+msgstr "V pořadníku"
+
+msgid "open for submissions"
+msgstr "Registrace povoleny"
+
+msgid "open signup sheet"
+msgstr "Povolit registrace"
+
+#. Default: "Thank You"
+#: content/signupsheet.py
+msgid "thank_you"
+msgstr "Poděkování"
+
+msgid "view registrants"
+msgstr "Zobrazit registrované"
+

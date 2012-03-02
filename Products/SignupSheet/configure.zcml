@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="Products.SignupSheet">
+    
+  <genericsetup:registerProfile
+      name="default"
+      title="Signup Sheet"
+      directory="profiles/default"
+      description="A signup sheet implementation for Plone"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <subscriber for=".interfaces.IRegistrant
+                   zope.app.container.interfaces.IObjectAddedEvent"
+              handler=".events.registrantAdded"
+            />
+
+</configure>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<import-steps>
+
+  <import-step
+     id="signupsheet-setupplugins"
+     version="20071020-01"
+     handler="Products.SignupSheet.setuphandlers.setupVarious"
+     title="Setup various post-install steps">
+    	<dependency step="plone-final"/>
+  </import-step>
+
+</import-steps>

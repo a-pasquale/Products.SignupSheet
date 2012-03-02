@@ -1,0 +1,95 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="signupsheet">
+
+<body>
+
+<metal:block
+    fill-slot="top_slot" />
+
+<div metal:fill-slot="main">
+<div metal:define-macro="main"
+    tal:omit-tag=""
+    tal:define="export_type request/export_type | nothing;
+                getInfoFor  python: context.portal_workflow.getInfoFor;
+                registrants python: [r.getObject() for r in context.getRegistrants()];
+                confirmed_registrants python: [r for r in registrants if getInfoFor(r, 'review_state') == 'confirmed'];
+                unconfirmed_registrants python: [r for r in registrants if getInfoFor(r, 'review_state') == 'unconfirmed'];
+                fieldnames  python:context.registrantFieldNames('Registrant');
+                fieldnames  python: [name for name in fieldnames if not name in ('id', )];
+				canReview python:member.has_permission('Review portal content', context);
+                ">
+
+<h1 i18n:translate="heading_view_registrants">View Registrants</h1>
+
+<div tal:condition="not:registrants" i18n:translate="no registrants">
+No registrants
+</div>
+
+<tal:if condition="registrants" >
+    <span tal:replace="python: len(registrants)" />
+    <span i18n:translate="registrants">registrants</span>,
+    <span i18n:translate="confirmed">confirmed</span>
+    <span tal:replace="python: len(confirmed_registrants)"/>,
+    <span i18n:translate="unconfirmed">unconfirmed</span>
+    <span tal:replace="python: len(unconfirmed_registrants)"/>
+    
+</tal:if>
+
+<table class="listing" summary="Registrants" tal:condition="registrants">
+
+<thead>
+<tr>
+    <th tal:repeat="fieldname fieldnames" 
+        i18n:translate="" 
+        tal:content="fieldname">Field Name
+    </th>
+    <th i18n:translate="heading_created">Created</th>
+    <th i18n:translate="heading_review_state">Review state</th>
+    <th i18n:translate="heading_action">Action</th>
+</tr>
+</thead>
+    
+<tbody>
+    <tal:loop repeat="r registrants">
+        <tr> 
+            <td tal:repeat="fieldname fieldnames">
+                <span tal:define="field python: r.Schema().getField(fieldname);
+                                  value python: field and field.getAccessor(r)() or '';"
+                      tal:content="value"
+                />
+            </td>
+            <td>
+                <span tal:content="python: context.toLocalizedTime(r.created(), True)" />
+            </td>
+            <td tal:define="state python: context.portal_workflow.getInfoFor(r, 'review_state')" >
+                <span i18n:translate="" tal:content="state" tal:attributes="class string:state-$state" />
+            </td>
+            <td>
+                <a tal:attributes="href string:${r/absolute_url}/edit"
+				   tal:condition="python: member.has_permission('Modify portal content', r)">
+                    <img tal:attributes="src string:$portal_url/edit.gif"
+                         title="Edit"
+                         alt="Edit"
+                         i18n:attributes="title;alt"
+                    />
+                </a>
+                <a tal:attributes="href string:confirm_registrant?id=${r/getId}"
+                    tal:condition="python: context.portal_workflow.getInfoFor(r, 'review_state') != 'confirmed' and canReview">
+                    <img tal:attributes="src string:$portal_url/confirm_icon.gif"
+                         title="Confirm"
+                         alt="Confirm"
+                         i18n:attributes="title;alt"
+                    />
+                </a>
+            </td>
+        </tr>
+    </tal:loop>
+</tbody>
+</table>
+            
+</div>
+</div>
+</body>
+</html>

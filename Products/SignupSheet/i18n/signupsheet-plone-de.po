@@ -1,0 +1,70 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2007-01-16 17:51+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Andreas Jung <yet@gmx.de>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: de\n"
+"Language-Name: German\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: plone\n"
+
+#. Default: "Confirm"
+#: skins/SignupSheet/view_registrants.pt
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#. Default: "Download"
+#: skins/SignupSheet/export_registrant_fields.pt
+msgid "Download"
+msgstr "Runterladen"
+
+#. Default: "Edit"
+#: skins/SignupSheet/view_registrants.pt
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#. Default: "The registration is closed"
+#: skins/SignupSheet/signupsheet_view.pt
+msgid "The registration is closed"
+msgstr "Die Registrierung ist abgeschlossen"
+
+#. Default: "confirmed:"
+#: skins/SignupSheet/view_registrants.pt
+msgid "confirmed"
+msgstr "Bestätigt"
+
+#. Default: "Action"
+#: skins/SignupSheet/view_registrants.pt
+msgid "heading_action"
+msgstr "Aktion"
+
+#. Default: "Created"
+#: skins/SignupSheet/view_registrants.pt
+msgid "heading_created"
+msgstr "Angelegt"
+
+#. Default: "Export Registrants"
+#: skins/SignupSheet/export_registrant_fields.pt
+msgid "heading_export_contacts"
+msgstr "Export Registrierungen"
+
+#. Default: "Review state"
+#: skins/SignupSheet/view_registrants.pt
+msgid "heading_review_state"
+msgstr "Status"
+
+#. Default: "View Registrants"
+#: skins/SignupSheet/view_registrants.pt
+msgid "View registrants"
+msgstr "Registrierungen anschauen"
+
+

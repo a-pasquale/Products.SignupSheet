@@ -1,0 +1,7 @@
+#registerd-objects {
+    display:none;
+}
+	
+#register-objects {
+	display:none;
+}

@@ -1,0 +1,73 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="signupsheet">
+
+<div tal:omit-tag="" metal:define-macro="css" tal:condition="python: context.portal_membership.isAnonymousUser()">
+    <tal:comment condition="nothing">
+        uhm, there is no "topslot" as in base_edit so 
+        we are using css slot for setting disable_border 
+    </tal:comment>
+    <tal:block define="dummy python:request.set('disable_border', 1)" />
+</div>
+
+<div metal:define-macro="body"
+     tal:define="plone_view nocall:context/@@plone">
+    <div class="description" tal:content="structure context/Description"/>
+    <div id="body-text" tal:content="structure context/getBodyText"/>
+
+    <div tal:condition="context/getEarlyBirdDate">
+        <span class="label" i18n:translate="Early bird until">Early bird until</span>:
+        <span tal:content="python: plone_view.toLocalizedTime(context.getEarlyBirdDate())" />
+    </div>
+    <div tal:condition="context/getRegistrationDeadline">
+        <span class="label" i18n:translate="Registration deadline">Registration deadline</span>:
+        <span tal:content="python: plone_view.toLocalizedTime(context.getRegistrationDeadline())" />
+    </div>
+
+</div>
+
+<div metal:define-macro="folderlisting" />
+
+<metal:footer define-macro="footer" i18n:domain="signupsheet">
+    
+    <form action="createObject" method="post"
+          tal:define="wf_state python: context.portal_workflow.getInfoFor(context, 'review_state')"
+                     tal:condition="python: not context.getSignupStatus() =='full'">
+      <div>
+        <input name="type_name"
+               type="hidden"
+               value="Registrant"
+               />
+
+        <div id="registration-closed" 
+             tal:condition="python: wf_state == 'closed'">
+            <span i18n:translate="The registration is closed">The registration is closed</span>
+        </div>
+
+        <div id="registration-open"
+             tal:condition="python: wf_state in ('earlybird', 'open')" > 
+
+            <p tal:condition="context/getDisplay_size_left"
+               i18n:translate="seats_left_message"><span tal:replace="context/getSeatsLeft"
+			                                             i18n:name="seats">21</span> seats left.</p>
+            <input class="standalone"
+                       tal:attributes="value context/getSignupMessage"
+                       type="submit"
+                       />
+
+        </div>
+
+      </div>
+    </form>
+    
+    <div id="ss-registration-full" 
+         i18n:translate="text_registration_full"
+         tal:condition="python:context.getSignupStatus() == 'full' ">
+            Registration is full
+    </div>
+    
+</metal:footer>
+
+</html>

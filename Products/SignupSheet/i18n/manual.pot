@@ -1,0 +1,155 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2007-02-01 19:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: signupsheet\n"
+
+#. Default: "Sign up!"
+#: content/signupsheet.py
+msgid "sign_up"
+msgstr ""
+
+#. Default: "Sign up for waitinglist"
+#: content/signupsheet.py
+msgid "sign_up_for_waitinglist"
+msgstr ""
+
+#. Default: "Email response message"
+#: Content Type: SignupSheet, Field: email_response
+msgid "label_email_response"
+msgstr ""
+
+#. Default: "Enter TALES expression of confirmation email subject. 'object' is SignupSheet object."
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "help_email_response_subject"
+msgstr ""
+
+#. Default: "Thank you page for returned to registrant. Is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "help_Thank_You"
+msgstr ""
+
+#. Default: "Number of registrants"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "field_eventsize"
+msgstr ""
+
+#. Default: "Enter TALES expression of notification email subject. 'object' is SignupSheet object. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "help_notify_email_response_subject"
+msgstr ""
+
+#. Default: "Size of wait list"
+#: Content Type: SignupSheet, Field: waitlist_size
+msgid "field_waitlist_size"
+msgstr ""
+
+#. Default: "Text for front page of signup"
+#: Content Type: SignupSheet, Field: text
+msgid "help_body_text"
+msgstr ""
+
+#. Default: "Check this checkbox to send email in HTML format. Otherwise will be sent in plain text."
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "help_html_email"
+msgstr ""
+
+#. Default: "Notification email subject"
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "label_notify_email_response_subject"
+msgstr ""
+
+#. Default: "Set to 0 for unlimited registration"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "fieldhelp_eventsize"
+msgstr ""
+
+#. Default: "Confirmation email subject"
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "label_email_response_subject"
+msgstr ""
+
+#. Default: "Notification email response message"
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "label_notify_email_response"
+msgstr ""
+
+#. Default: "Body Text"
+#: Content Type: SignupSheet, Field: text
+msgid "label_body_text"
+msgstr ""
+
+#. Default: "Email address (or adresses delimited by comma) which will be notified about new registrant"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "help_notify_email"
+msgstr ""
+
+#. Default: "Notify mail address"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "label_notify_email"
+msgstr ""
+
+#. Default: "Email message text that is returned to registrant. This template is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: email_response
+msgid "help_email_message"
+msgstr ""
+
+#. Default: "HTML email"
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "label_html_email"
+msgstr ""
+
+#. Default: "Thank You"
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "label_Thank_You"
+msgstr ""
+
+#. Default: "Email message text that is sent to notifyEmail address. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "help_notify_email_message"
+msgstr ""
+
+#. Default: "Registrant prolog"
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "label_registrant_prolog_text"
+msgstr ""
+
+#. Default: "This text will be displayed before registrant fields on the registrant edit page."
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "help_registrant_prolog_text"
+msgstr ""
+
+#. Default: "Early bird phase until"
+#: Content Type: SignupSheet, Field: earlyBirdDate
+msgid "field_early_bird_phase"
+msgstr ""
+
+#. Default: "Registration deadline"
+#: Content Type: SignupSheet, Field: registrationDeadline
+msgid "field_registration_deadline"
+msgstr ""
+
+#. Default: "{seats} seats left"
+msgid "seats_left_message"
+msgstr ""
+
+#. Defaut: "Display seats left"
+msgid "field_display_size_left"
+msgstr ""
+
+#. Defaut: "Choose to show in the subscription page the number of seats left"
+msgid "fieldhelp_display_size_left"
+msgstr ""

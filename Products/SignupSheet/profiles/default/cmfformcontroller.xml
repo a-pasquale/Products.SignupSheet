@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<cmfformcontroller>
+  <action status="success"
+          action_arg="string:registrant_post"
+          context_type="Registrant"
+          object_id="validate_integrity"
+          action_type="traverse_to"/>  
+</cmfformcontroller>

@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="signupsheet">
+
+<body>
+
+<metal:block
+    fill-slot="top_slot"
+    tal:define="dummy python:request.set('disable_border', 1)" />
+
+<div metal:fill-slot="main">
+     <div metal:define-macro="main"
+         tal:omit-tag="">
+     
+               <h1 i18n:translate="heading_thank_you">Thank you</h1>
+              
+               <div tal:content="structure python:request.SESSION.get('signupsheet.thankyoutext', '')" />
+               <br />
+               <a href="" tal:attributes="href options/signup_sheet/absolute_url|context/absolute_url"
+                          i18n:translate="thank_you_go_back">Back</a>
+     </div>
+</div>
+</body>
+</html>

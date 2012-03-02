@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<object name="SignupSheet"
+   meta_type="Factory-based Type Information with dynamic views"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n" i18n:domain="signupsheet">
+ <property name="title" i18n:translate="">Signup Sheet</property>
+ <property name="description" i18n:translate="">A form for subscribe users to attend an event</property>
+ <property name="content_icon">page_edit.gif</property>
+ <property name="content_meta_type">SignupSheet</property>
+ <property name="product">SignupSheet</property>
+ <property name="factory">addSignupSheet</property>
+ <property name="immediate_view">base_view</property>
+ <property name="global_allow">True</property>
+ <property name="filter_content_types">True</property>
+ <property name="allowed_content_types">
+  <element value="Registrant"/>
+ </property>
+ <property name="allow_discussion">False</property>
+ <property name="default_view">base_view</property>
+ <property name="view_methods">
+  <element value="base_view"/>
+ </property>
+ <property name="default_view_fallback">False</property>
+ <alias from="(Default)" to="(dynamic view)"/>
+ <alias from="edit" to="atct_edit"/>
+ <alias from="index.html" to="(dynamic view)"/>
+ <alias from="properties" to="base_metadata"/>
+ <alias from="sharing" to="folder_localrole_form"/>
+ <alias from="view" to="(selected layout)"/>
+ <action title="View" action_id="view" category="object" condition_expr=""
+    url_expr="string:${object_url}/base_view" visible="True">
+  <permission value="View"/>
+ </action>
+ <action title="Edit" action_id="edit" category="object" condition_expr=""
+    url_expr="string:${object_url}/base_edit" visible="True">
+  <permission value="Modify portal content"/>
+ </action>
+ <action title="References" action_id="references" category="object"
+    condition_expr="object/archetype_tool/has_graphviz"
+    url_expr="string:${object_url}/reference_graph" visible="True">
+  <permission value="Modify portal content"/>
+  <permission value="Review portal content"/>
+ </action>
+ <action title="Folder Listing" action_id="folderlisting" category="folder"
+    condition_expr="object/isPrincipiaFolderish"
+    url_expr="string:${folder_url}/view" visible="False">
+  <permission value="View"/>
+ </action>
+ <action title="edit registrant form" action_id="editschema" category="object"
+    condition_expr=""
+    url_expr="string:${object_url}/signupsheet_schema_editor" visible="True">
+  <permission value="ATSE: Manage schema"/>
+ </action>
+ <action title="view registrants" action_id="viewregistrants"
+    category="object" condition_expr=""
+    url_expr="string:${object_url}/view_registrants" visible="True">
+  <permission value="SignupSheet: View Registrants" />
+ </action>
+ <action title="export data" action_id="exportdata" category="object"
+    condition_expr="" url_expr="string:${object_url}/export_registrant_fields"
+    visible="True">
+  <permission value="SignupSheet: View Registrants" />
+ </action>
+</object>

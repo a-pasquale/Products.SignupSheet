@@ -1,0 +1,354 @@
+# Translation of signupsheet.pot to Italian
+# Federica D'Elia <federica.delia@student.unife.it>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: SignupSheet\n"
+"POT-Creation-Date: 2011-10-13 13:44+0000\n"
+"PO-Revision-Date: 2009-07-06 12:39+0000\n"
+"Last-Translator: Federica D'Elia <federica.delia@student.unife.it>\n"
+"Language-Team: <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: signupsheet\n"
+
+#: ../profiles/default/types/SignupSheet.xml
+msgid "A form for subscribe users to attend an event"
+msgstr "Un modulo per iscrivere utenti a partecipare ad un evento"
+
+#: ../events.py:19
+msgid "Can't subscribe. No more free slots"
+msgstr "Impossibile iscriversi. Non sono disponibili ulteriori posti"
+
+#. Default: "Confirm"
+#: ../skins/SignupSheet/view_registrants.pt:80
+msgid "Confirm"
+msgstr "Conferma"
+
+#. Default: "Download"
+#: ../skins/SignupSheet/export_registrant_fields.pt:78
+msgid "Download"
+msgstr "Scarica"
+
+#. Default: "Early bird until"
+#: ../skins/SignupSheet/signupsheet_view.pt:21
+msgid "Early bird until"
+msgstr "Iscrizioni scontate fino al"
+
+#. Default: "Edit"
+#: ../skins/SignupSheet/view_registrants.pt:72
+msgid "Edit"
+msgstr "Modifica"
+
+#: ../content/registrant.py:38
+msgid "First name"
+msgstr "Nome"
+
+#: ../content/registrant.py:45
+msgid "Last name"
+msgstr "Cognome"
+
+#: ../profiles/default/types/Registrant.xml
+msgid "Registrant"
+msgstr "Registrazione"
+
+#. Default: "Registration deadline"
+#: ../skins/SignupSheet/signupsheet_view.pt:25
+msgid "Registration deadline"
+msgstr "Scadenza dell'iscrizione"
+
+#: ../profiles/default/types/Registrant.xml
+msgid "Registration form data"
+msgstr "Modulo di registrazione"
+
+#: ../profiles/default/types/SignupSheet.xml
+msgid "Signup Sheet"
+msgstr ""
+
+#. Default: "The registration is closed"
+#: ../skins/SignupSheet/signupsheet_view.pt:46
+msgid "The registration is closed"
+msgstr "L'iscrizione è chiusa"
+
+#. Default: "Colon"
+#: ../skins/SignupSheet/export_registrant_fields.pt:63
+msgid "colon"
+msgstr "Colonna"
+
+#. Default: "Comma"
+#: ../skins/SignupSheet/export_registrant_fields.pt:62
+msgid "comma"
+msgstr "Virgola"
+
+#: ../skins/SignupSheet/view_registrants.pt:33
+msgid "confirmed"
+msgstr "confermato"
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">Thank you for registering to <tal:s tal:content=\"context/Title\" />\nYour status is: <tal:s tal:replace=\"registrant/computeStatus\">registered</tal:s>\nYour email is: <tal:e tal:content=\"registrant/email\" />\n</tal:block>\n"
+#: ../content/signupsheet.py:513
+msgid "default_email_response_message"
+msgstr ""
+"<tal:block tal:define=\"registrant nocall:options/registrant\">La ringraziamo per essersi registrato a <tal:s tal:content=\"context/Title\" />\n"
+"Il suo stato è: <tal:s tal:replace=\"registrant/computeStatus\">registered</tal:s>\n"
+"La sua e-mail è: <tal:e tal:content=\"registrant/email\" />\n"
+"</tal:block>\n"
+
+#. Default: "string:Your registration for ${object/Title} has been received"
+#: ../content/signupsheet.py:499
+msgid "default_email_response_subject"
+msgstr "string:La tua registrazione per ${object/Title} è stata ricevuta"
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">Thank you for registering, we will contact you shortly. <br/>\nYou provided the following information:<br />\nName: <strong tal:content=\"registrant/computeFullname\" /><br/>\nEmail: <strong tal:content=\"registrant/email\" /><br/>\n</tal:block>\n"
+#: ../content/signupsheet.py:484
+msgid "default_thank_you_text"
+msgstr ""
+"<tal:block tal:define=\"registrant nocall:options/registrant\">La ringraziamo per la registrazione, verrà contattato a breve. <br/>\n"
+"Ha fornito i seguenti dati:<br />\n"
+"Nome: <strong tal:content=\"registrant/computeFullname\" /><br/>\n"
+"E-mail: <strong tal:content=\"registrant/email\" /><br/>\n"
+"</tal:block>\n"
+
+#. Defaut: "Display seats left"
+msgid "field_display_size_left"
+msgstr "Visualizza posti rimanenti"
+
+#. Default: "Early bird phase until"
+#: Content Type: SignupSheet, Field: earlyBirdDate
+msgid "field_early_bird_phase"
+msgstr "Iscrizioni scontate fino al"
+
+#. Default: "Number of registrants"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "field_eventsize"
+msgstr "Numero di iscritti"
+
+#. Default: "Field Name"
+#: ../skins/SignupSheet/export_registrant_fields.pt:38
+msgid "field_name"
+msgstr "Nome del campo"
+
+#. Default: "Registration deadline"
+#: Content Type: SignupSheet, Field: registrationDeadline
+msgid "field_registration_deadline"
+msgstr "Scadenza dell'iscrizione"
+
+#. Default: "Size of wait list"
+#: Content Type: SignupSheet, Field: waitlist_size
+msgid "field_waitlist_size"
+msgstr "Dimensione della lista di attesa"
+
+#. Defaut: "Choose to show in the subscription page the number of seats left"
+msgid "fieldhelp_display_size_left"
+msgstr "Scegli se visualizzare nella pagina di iscrizione i posti rimanenti"
+
+#. Default: "Set to 0 for unlimited registration"
+#: Content Type: SignupSheet, Field: eventsize
+msgid "fieldhelp_eventsize"
+msgstr "Impostare a 0 per un'iscrizione illimitata"
+
+#. Default: "Action"
+#: ../skins/SignupSheet/view_registrants.pt:50
+msgid "heading_action"
+msgstr "Azione"
+
+#. Default: "Created"
+#: ../skins/SignupSheet/view_registrants.pt:48
+msgid "heading_created"
+msgstr "Creato"
+
+#. Default: "Export Registrants"
+#: ../skins/SignupSheet/export_registrant_fields.pt:17
+msgid "heading_export_contacts"
+msgstr "Esporta gli iscritti"
+
+#. Default: "Select fields to export and download CSV file"
+#: ../skins/SignupSheet/export_registrant_fields.pt:19
+msgid "heading_import_contacts_step_one"
+msgstr "Selezionare i campi che si intende esportare e scaricare il file CSV"
+
+#. Default: "Registration for ${title}"
+#: ../skins/Registrant/registrant_edit.pt:10
+msgid "heading_registrant"
+msgstr "Iscrizione per ${title}"
+
+#. Default: "Review state"
+#: ../skins/SignupSheet/view_registrants.pt:49
+msgid "heading_review_state"
+msgstr "Stato di revisione"
+
+#. Default: "Thank you"
+#: ../skins/SignupSheet/thank_you_message.pt:16
+msgid "heading_thank_you"
+msgstr "Grazie"
+
+#. Default: "View Registrants"
+#: ../skins/SignupSheet/view_registrants.pt:24
+msgid "heading_view_registrants"
+msgstr "Vedi gli iscritti"
+
+#. Default: "Thank you page for returned to registrant. Is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "help_Thank_You"
+msgstr "Pagina di ringraziamento restituita all'iscritto. Viene restituita nel contesto SignupSheet. L'oggetto iscritto corrente è disponibile via 'options/registrant'."
+
+#. Default: "Text for front page of signup"
+#: Content Type: SignupSheet, Field: text
+msgid "help_body_text"
+msgstr "Testo per la pagina principale dell'iscrizione."
+
+#. Default: "Email message text that is returned to registrant. This template is rendered in context of SignupSheet. Current registrant object is available through 'options/registrant'."
+#: Content Type: SignupSheet, Field: email_response
+msgid "help_email_message"
+msgstr "Messaggio e-mail restituito all'iscritto. Questo template viene restituito nel contesto SignupSheet. L'oggetto iscritto corrente è disponibile via 'options/registrant'."
+
+#. Default: "Enter TALES expression of confirmation email subject. 'object' is SignupSheet object."
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "help_email_response_subject"
+msgstr "Inserire l'espressione TALES per l'oggetto dell'e-mail di conferma. Con 'object' è possibile riferirsi all'oggetto SignupSheet."
+
+#. Default: "Check this checkbox to send email in HTML format. Otherwise will be sent in plain text."
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "help_html_email"
+msgstr "Spuntare questo checkbox per spedire l'e-mail in formato HTML. Altrimenti sarà inviata come testo semplice."
+
+#. Default: "Email address (or adresses delimited by comma) which will be notified about new registrant"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "help_notify_email"
+msgstr "L'indirizzo e-mail (o indirizzi separati da una virgola) che riceverà una notifica della presenza del nuovo iscritto."
+
+#. Default: "Email message text that is sent to notifyEmail address. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "help_notify_email_message"
+msgstr "Messaggio e-mail che viene inviato all'indirizzo di notifica. Se l'indirizzo e-mail di notifica non viene definito, questo campo non è utilizzato."
+
+#. Default: "Enter TALES expression of notification email subject. 'object' is SignupSheet object. If no notfiyEmail address set, this field is not used."
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "help_notify_email_response_subject"
+msgstr "Inserire l'espressione TALES per l'oggetto dell'e-mail di notifica. Con 'object' è possibile riferirsi all'oggetto SignupSheet. Se l'indirizzo e-mail di notifica non è definito, questo campo non è utilizzato."
+
+#. Default: "This text will be displayed before registrant fields on the registrant edit page."
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "help_registrant_prolog_text"
+msgstr "Questo testo sarà mostrato prima dei campi nella pagina di modifica dell'iscritto."
+
+#. Default: "Thank You"
+#: Content Type: SignupSheet, Field: thank_you_text
+msgid "label_Thank_You"
+msgstr "Grazie"
+
+#. Default: "Body Text"
+#: Content Type: SignupSheet, Field: text
+msgid "label_body_text"
+msgstr "Corpo del testo"
+
+#. Default: "Delimiter"
+#: ../skins/SignupSheet/export_registrant_fields.pt:60
+msgid "label_delimiter"
+msgstr "Delimitatore"
+
+#. Default: "Email response message"
+#: Content Type: SignupSheet, Field: email_response
+msgid "label_email_response"
+msgstr "Messaggio dell'e-mail di risposta"
+
+#. Default: "Confirmation email subject"
+#: Content Type: SignupSheet, Field: email_response_subject
+msgid "label_email_response_subject"
+msgstr "Oggetto dell'e-mail di conferma"
+
+#. Default: "HTML email"
+#: Content Type: SignupSheet, Field: htmlEmail
+msgid "label_html_email"
+msgstr "E-mail HTML"
+
+#. Default: "Notify mail address"
+#: Content Type: SignupSheet, Field: notifyEmail
+msgid "label_notify_email"
+msgstr "Indirizzo e-mail di notifica"
+
+#. Default: "Notification email response message"
+#: Content Type: SignupSheet, Field: notify_email_response
+msgid "label_notify_email_response"
+msgstr "Messaggio di risposta dell'e-mail di notifica"
+
+#. Default: "Notification email subject"
+#: Content Type: SignupSheet, Field: notify_email_response_subject
+msgid "label_notify_email_response_subject"
+msgstr "Oggetto dell'e-mail di notifica"
+
+#. Default: "Registrant prolog"
+#: Content Type: SignupSheet, Field: registrantProlog
+msgid "label_registrant_prolog_text"
+msgstr "Prologo dell'iscritto"
+
+#. Default: "No registrants"
+#: ../skins/SignupSheet/view_registrants.pt:26
+msgid "no registrants"
+msgstr "Nessun iscritto"
+
+#. Default: "<tal:block tal:define=\"registrant nocall:options/registrant\">New registrant registered for <tal:s tal:content=\"context/Title\" />\nPlease check current registrans: <tal:s tal:content=\"string:${context/absolute_url}/view_registrants\" />\n</tal:block>\n"
+#: ../content/signupsheet.py:540
+msgid "notify_email_response_message"
+msgstr ""
+"<tal:block tal:define=\"registrant nocall:options/registrant\">Nuova iscrizione per <tal:s tal:content=\"context/Title\" />\n"
+"Prego, verificare gli iscritti: <tal:s tal:content=\"string:${context/absolute_url}/view_registrants\" />\n"
+"</tal:block>\n"
+
+#. Default: "string:Notification: New registration for ${object/Title} has been received"
+#: ../content/signupsheet.py:527
+msgid "notify_email_response_subject"
+msgstr "string:Notifica: nuova registrazione per ${object/Title} ricevuta"
+
+#. Default: "registrants"
+#: ../skins/SignupSheet/view_registrants.pt:32
+msgid "registrants"
+msgstr "iscritti"
+
+#. Default: "${seats} seats left."
+#: ../skins/SignupSheet/signupsheet_view.pt:53
+msgid "seats_left_message"
+msgstr "${seats} posti rimanenti."
+
+#. Default: "Semicolon"
+#: ../skins/SignupSheet/export_registrant_fields.pt:65
+msgid "semicolon"
+msgstr "Punto e virgola"
+
+#. Default: "Sign up!"
+#: content/signupsheet.py
+msgid "sign_up"
+msgstr "Iscriviti!"
+
+#. Default: "Sign up for waitinglist"
+#: content/signupsheet.py
+msgid "sign_up_for_waitinglist"
+msgstr "Iscriviti in lista di attesa"
+
+#. Default: "Space"
+#: ../skins/SignupSheet/export_registrant_fields.pt:66
+msgid "space"
+msgstr "Spazio"
+
+#. Default: "Tabulator"
+#: ../skins/SignupSheet/export_registrant_fields.pt:64
+msgid "tabulator"
+msgstr "Tabulatore"
+
+#. Default: "Registration is full"
+#: ../skins/SignupSheet/signupsheet_view.pt:65
+msgid "text_registration_full"
+msgstr "L'iscrizione è chiusa"
+
+#. Default: "Back"
+#: ../skins/SignupSheet/thank_you_message.pt:20
+msgid "thank_you_go_back"
+msgstr "Indietro"
+
+#: ../skins/SignupSheet/view_registrants.pt:35
+msgid "unconfirmed"
+msgstr "non confermato"
+

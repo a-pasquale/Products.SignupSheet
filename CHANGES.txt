@@ -1,0 +1,193 @@
+0.7.0 (Unreleased)
+------------------
+
+- fixed import code for Plone 4.1 compatibility [keul]
+
+0.6.1 (2012-01-09)
+------------------
+
+- removed package initialize that duplicate the product in portal_quickinstaller [keul]
+- fixed a critical bug that block users subscription when not using queue size [keul]
+
+0.6.0 (2011-10-25)
+------------------
+
+- more SMTP server fault tolerance when notifying the subscriber [keul]
+- fixed bug that prevent anon user to see closed signup sheet if date infos are used
+  (close `#51`__) [keul]
+- now default registrant fields can be translated (also italian translation provided) [keul]
+- try to fill registration data for authenticated users automatically
+  (close `#53`__) [keul]
+- now the "*edit registrant form*" tab appear only if the user has the proper "*ATSE: Manage schema*"
+  permission [keul]
+- aligned security with latest Plone 3 (and Plone 4.1) roles (close `#39`__) [keul]
+- updated workflows: removed some useless permissions customization and aligned with new-generation Plone roles [keul]
+- access to views for seeing and exporting registrants are now protected by the new ``SignupSheet: View Registrants``
+  [keul]
+- do not fail when exporting registrants where some infos are missing, but put there and empty value [keul]
+- some more label and name translable [keul]
+- Registrant configured to be not searchable and hidden from navigation [keul]
+- added a new option ("Display seats left") for display the number of seats left in the sheet [keul]
+- contents now implements some marker interfaces [keul]
+- is no more possible for malicious users to subscribe when registration is full [keul]
+
+__ http://plone.org/products/signupsheet/issues/51
+__ http://plone.org/products/signupsheet/issues/53
+__ http://plone.org/products/signupsheet/issues/39
+
+0.5.3 (2011-09-01)
+------------------
+
+- found that version 0.5.2 was not installable if property sheet was not already there [keul]
+
+0.5.2 (2011-05-06)
+------------------
+
+- added a ZPT omit-tag to prevent the display of a DIV in improper places [keul]
+- do not fail client side if MailHost is bad configured, but only log the error [keul]
+- added a new ``signupsheet_properties`` with a flag for bypass Varnish cache, fixing a
+  bad security/privacy problem, that can display and old "Thank you" messa page [keul] 
+
+0.5.1 (2011-01-18)
+------------------
+
+- removed "Properties" tab from contents, not more used on Plone 3+ [keul]
+- default values for many fields are now translable [keul]
+- fix to italian translations [keul]
+- added translations for the ugly "Thank_You" fieldset [keul]
+
+0.5 (2010/09/31)
+----------------
+- final release
+
+0.5b1 (2010/04/24)
+------------------
+- fix tests to be compatible with ATSENG 0.6 [aaronv]
+- added install of ATSENG to setup_handler [aaronv]
+- uses ATSENG 0.6
+- use ParentOrToolManagedSchema for registrant to work around bug when logged-in user edits Registrants
+- re-applyed the fix added in version 0.4.2 and someway no more available [keul]
+- added import step for TinyMCE [keul]
+- removed all available views but Base View [keul]
+- confirm icon in view_registrants template was broken [keul]
+
+0.4.4 (2010/04/19)
+--------------------
+- setuphandler is only run when own product is installed. [mlundwall]
+- RegistrationDeadline and EarlyBirdDate now displayed using toLocalizedTime [keul]
+- the subscription form now use the POST method [keul]
+- minor fixes to italian translation [fdelia]
+
+0.4.3 (2010/01/22)
+-------------------
+- update Italian translations
+  (fdelia)
+- added fix for XHTML compliance for signupsheet_view
+
+0.4.2.2 (2009/07/12)
+--------------------
+- updated Italian translations
+- Espen Moe-Nilssen supplied Norwegian translations
+- Luca Fabbri supplied Italian translations
+- fix for http://plone.org/products/signupsheet/issues/43
+
+0.4.2 (2009/04/14)
+------------------
+- changed permission for using modifying the schema to ManagePortalContent
+  (ManagePortal is too restrictive)
+
+0.4.1 (2009/03/39)
+------------------
+- fixed bug for anon permissions on registrationDeadline and earlyBirdDate
+  (aaronv)
+- fixed tests
+  (aaronv)
+
+0.4.0 (2009/03/11)
+------------------
+- added additional early-bird workflow (signupsheet_extended_workflow)
+  (ajung)
+- added additional registrant workflow with confirmation email up confirmation
+  time instead of subscription time (signupsheet_registrant_extended_workflow)
+  (ajung)
+
+
+0.3.2 (2009/03/09)
+------------------
+- fixed dependencies
+
+0.3.1 (2009/03/09)
+------------------
+- fixed issue with Anon registrant and metadata updating
+- added metadata.xml for GS 1.5 support
+- computeFullname now more robust
+- tested with Plone 3.1.5 and ATSchemaEditorNG 0.5.0
+
+0.3.0
+-----
+- updates to make Plone 3.0.6 compatible.
+- added tests for email and posting workflow
+- bulk of Plone 3 compatibility work done by Radmin Novotny  
+
+
+0.2.0 Beta
+----------
+Andreas Jung and Radim Novotny contributed significantly to this release.
+
+- added Portuguese Brasilian translation. Thanks Vitor Reis.
+- added 'view registrants' that displays current registrants status and allows for confirming and editing registrants
+- added i18n support for templates
+- added German translation
+- updated tests to pass
+- updated i18n
+- Because thank_you_page and email_response fields were changed from TextField
+  to ZPTField it is necessary to manually run migration code from 
+  Extensions/migrate method fixZPTFields. This method will read
+  old values from these two fields and store the same value in new format.
+  WARNING: if you don't run migration you will get AttributeError: read
+  when accessing old SignupSheet objects  
+- It is possible to generate HTML emails
+- workflow script sendInitialEmail is called *before* the transition,
+  because anonymous can access registrant object only in 'new' state.
+  If script will be called after transition, Registrant.sendNotificationMail
+  method won't have access to registrant object. Access is required due to 
+  rendering templates from ZPTField.
+- removed signupsheet_email_* templates
+- Introduced TALESField and TemplateFields dependecy. SignupSheet uses
+  these two fields for scripting thank_you_page, confirmation and 
+  notification email (subject and message).
+  Syntax is described in field help text::
+
+     context = SignupSheet
+     options/registrant = current Registrant object
+     
+- added notifyEmail field to signupsheet schema. It allows to send notification 
+  about new registrant to some email address.
+- removed registration of SignupSheet.css from portal_css
+- it is possible to use options/computed_text in email template now
+- use getSiteEncoding if available
+- additional i18n work (signupsheet.py - schema)
+- improved i18n catalogs, added Czech translation
+- do not depend on Kupu in install code
+- replaced dtml templates with ZPT with i18n
+- use base_view for SignupSheet and simplified signupsheet_view template
+
+
+0.1.1
+-----
+- fixed bug that caused editing existing Registrant objects to fail
+- added import for ATSENG so test run properly
+- fixed incorrect security declaration for registrantFieldNames
+
+0.1
+---
+- Installs ATSENG dependency
+- Fixed bug for computing status, added tests against bug
+- Fixed manager can override initial post state
+- Registrant edit page displays title of SignupSheet
+- Fixed Thank you message renders proper HTML
+- Fixed email response so that it is text only
+
+0.1-Beta-2
+----------
+- tracking changes

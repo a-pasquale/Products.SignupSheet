@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<object name="portal_skins">
+ <object name="SignupSheet" meta_type="Filesystem Directory View"
+    directory="Products.SignupSheet:skins/SignupSheet"/>
+ <object name="Registrant" meta_type="Filesystem Directory View"
+     directory="Products.SignupSheet:skins/Registrant"/>
+  <skin-path name="*">
+    <layer name="SignupSheet" insert-after="custom"/>
+    <layer name="Registrant" insert-after="SignupSheet"/>
+  </skin-path>
+</object>
