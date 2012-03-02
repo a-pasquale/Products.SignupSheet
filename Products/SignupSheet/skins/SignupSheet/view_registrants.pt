@@ -18,7 +18,8 @@
                 unconfirmed_registrants python: [r for r in registrants if getInfoFor(r, 'review_state') == 'unconfirmed'];
                 fieldnames  python:context.registrantFieldNames('Registrant');
                 fieldnames  python: [name for name in fieldnames if not name in ('id', )];
-				canReview python:member.has_permission('Review portal content', context);
+                member context/portal_membership/getAuthenticatedMember;
+                canReview python:member.has_permission('Review portal content', context);
                 ">
 
 <h1 i18n:translate="heading_view_registrants">View Registrants</h1>
