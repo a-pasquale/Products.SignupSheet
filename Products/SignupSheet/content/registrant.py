@@ -212,7 +212,7 @@ class Registrant(ParentOrToolManagedSchema, BaseContent):
         subject = signupsheet.getEmailResponseSubject(**options)
         subject = subject.strip()
         try:
-            mailHost.secureSend(message, send_to_address, envelope_from, subject=subject, subtype=subtype, charset=encoding, debug=False, From=send_from_address)
+            mailHost.secureSend(message, send_to_address, envelope_from, subject=subject, subtype=subtype, charset=encoding, debug=False)
         except (MailHostError, smtplib.SMTPException), e:
             self.plone_log("Error notifying the user: %s" % str(e))
         
@@ -222,7 +222,7 @@ class Registrant(ParentOrToolManagedSchema, BaseContent):
             subject = signupsheet.getNotifyEmailResponseSubject(**options)
             subject = subject.strip()
             try:
-                mailHost.secureSend(message, notify_to_address, envelope_from, subject=subject, subtype=subtype, charset=encoding, debug=False, From=send_from_address)
+                mailHost.secureSend(message, notify_to_address, envelope_from, subject=subject, subtype=subtype, charset=encoding, debug=False)
             except (MailHostError, smtplib.SMTPException):
                 pass
 
