@@ -304,8 +304,8 @@ class SignupSheet(SchemaEditor, ATFolder, BaseFolder):
     content_icon   = 'page_edit.gif'
     
     # explicitly specify base_view because this is a folder
-    default_view   = 'base_view'
-    immediate_view = 'base_view'
+    default_view   = 'signupsheet_view'
+    immediate_view = 'signupsheet_view'
     
     # Allow images and files to be uploaded into this containerish object
     allowed_content_types = ['Registrant']

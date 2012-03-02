@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="Products.SignupSheet">
+
+    <browser:page
+        for="*"
+        class=".views.SignupSheetView"
+        name="signupsheet_view"
+        template="signupsheet_view.pt"
+        permission="zope2.View"
+        />
+
+    <browser:menuItem
+        for="*"
+        menu="plone_displayviews"
+        title="Signup Sheet"
+        action="signupsheet_view"
+        description="Signup sheet template"
+    />
+
+</configure>

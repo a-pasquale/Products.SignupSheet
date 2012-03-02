@@ -18,4 +18,5 @@
               handler=".events.registrantAdded"
             />
 
+  <include package=".browser" />
 </configure>
